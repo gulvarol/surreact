@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+
+datageneration/smpl_data/textures/
+datageneration/smpl_data/*.fbx
+datageneration/smpl_data/joint_regressors.pkl
+datageneration/smpl_data/segm_per_v_overlap.pkl
+datageneration/smpl_data/shape_params.npz
+
+training/checkpoints/
+training/data/
+training/pretrained_models/
+
+data

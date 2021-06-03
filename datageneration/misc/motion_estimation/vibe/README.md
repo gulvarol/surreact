@@ -1,0 +1,1 @@
+`demo_list.py` file is added to the mkocabas/VIBE repository clone to extract VIBE from a list of videos. The way the script was launched is shown at the top of the script. It iterates over a txt file of video names, it saves the vibe output. Please comply with the original license.
