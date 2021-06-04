@@ -26,7 +26,7 @@ Once ready, you can generate one clip by running:
 # set `BLENDER_PATH` and `CODE_PATH` variables in this script
 bash datageneration/exe/run.sh
 ```
-Note that `-t 1` option in [`run.sh`](datageneration/exe/run.sh) can be removed to run faster on multi cores. We used [`submit_multi_job*.sh`](datageneration/exe/) to generate clips for the whole datasets in parallel on the cluster, you can adapt this for your infrastructure. This script also has sample argument-value pairs. Find in (`utils/argutils.py`)[datageneration/utils/argutils.py] a list of arguments and their explanations. You can enable/disable outputting certain modalities by setting [`output_types` here](datageneration/main.py#L70).
+Note that `-t 1` option in [`run.sh`](datageneration/exe/run.sh) can be removed to run faster on multi cores. We used [`submit_multi_job*.sh`](datageneration/exe/) to generate clips for the whole datasets in parallel on the cluster, you can adapt this for your infrastructure. This script also has sample argument-value pairs. Find in [`utils/argutils.py`](datageneration/utils/argutils.py) a list of arguments and their explanations. You can enable/disable outputting certain modalities by setting [`output_types` here](datageneration/main.py#L72).
 
 ## 2. Training action recognition models
 
@@ -101,6 +101,6 @@ If you use this code or data, please cite the following:
 Please check the [SURREAL license terms](http://www.di.ens.fr/willow/research/surreal/data/license.html) before downloading and/or using the SURREACT data and data generation code.
 
 ## Acknowledgements
-The data generation code was extended from the [gulvarol/surreal](https://github.com/gulvarol/surreal). The training code was extended from [bearpaw/pytorch-pose](https://github.com/bearpaw/pytorch-pose). The source of assets include action recognition datasets [NTU](http://rose1.ntu.edu.sg/Datasets/actionRecognition.asp) and [UESTC](https://github.com/HRI-UESTC/CFM-HRI-RGB-D-action-database/blob/master/License%20Agreement.pdf), [SMPL](https://smpl.is.tue.mpg.de/) and [SURREAL](http://www.di.ens.fr/willow/research/surreal/) projects. The motion estimation was possible thanks to [mkocabas/VIBE](https://github.com/mkocabas/VIBE) or [akanazawa/human_dynamics (HMMR)](https://github.com/akanazawa/human_dynamics) repositories. Please cite the respective papers if you use these.
+The data generation code was extended from [gulvarol/surreal](https://github.com/gulvarol/surreal). The training code was extended from [bearpaw/pytorch-pose](https://github.com/bearpaw/pytorch-pose). The source of assets include action recognition datasets [NTU](http://rose1.ntu.edu.sg/Datasets/actionRecognition.asp) and [UESTC](https://github.com/HRI-UESTC/CFM-HRI-RGB-D-action-database/blob/master/License%20Agreement.pdf), [SMPL](https://smpl.is.tue.mpg.de/) and [SURREAL](http://www.di.ens.fr/willow/research/surreal/) projects. The motion estimation was possible thanks to [mkocabas/VIBE](https://github.com/mkocabas/VIBE) or [akanazawa/human_dynamics (HMMR)](https://github.com/akanazawa/human_dynamics) repositories. Please cite the respective papers if you use these.
 
 Special thanks to Inria clusters `sequoia` and `rioc`.
