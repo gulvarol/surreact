@@ -44,12 +44,12 @@ In order to download SURREACT datasets, you need to accept the license terms fro
 
 https://www.di.ens.fr/willow/research/surreal/data/
 
-Once you receive the credentials to download the dataset, you will have a personal username and password. Use these to download the synthetic videos from the following links. Note that due to storage complexity, we only provide `.mp4` video files and metadata, but not the other modalities such as flow and segmentation. You are encouraged to run the data generation code to obtain those. We provide videos corresponding to NTU and UESTC datasets.
+Once you receive the credentials to download the dataset, you will have a personal username and password. Use these to download the synthetic videos from the following links. Note that due to storage complexity, we only provide `.mp4` video files, metadata (`*_info.mat`), and segmentation maps (`*_segm.mat`), but not all the other modalities such as flow. You are encouraged to run the data generation code to obtain those. We provide videos corresponding to NTU and UESTC datasets.
 
-* [surreact_ntu_vibe.tar.gz, (8.4GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_vibe.tar.gz) with 105,642 videos (105,162 training, 480 test). This is used in Table 1 of the paper, obtains the best results.
-* [surreact_ntu_hmmr.tar.gz, (9.1GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_hmmr.tar.gz) with 105,983 videos (105,503 training, 480 test). This is used in most experiments in the paper.
-* [surreact_uestc_vibe.tar.gz, (3.2GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_uestc_vibe.tar.gz) with 12800 videos (12800 training, 0 test). This is not used in the paper.
-* [surreact_uestc_hmmr.tar.gz, (646MB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_uestc_hmmr.tar.gz) with 3193 videos (3154 training, 39 test). This is a subset due to computational complexity, it is used in the paper.
+* [surreact_ntu_vibe.tar.gz (8.4GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_vibe.tar.gz); [surreact_ntu_vibe_segm.tar.gz (7.5GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_vibe_segm.tar.gz) with 105,642 videos (105,162 training, 480 test). This is used in Table 1 of the paper, obtains the best results.
+* [surreact_ntu_hmmr.tar.gz (9.1GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_hmmr.tar.gz); [surreact_ntu_hmmr_segm.tar.gz (7.7GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_ntu_hmmr_segm.tar.gz) with 105,983 videos (105,503 training, 480 test). This is used in most experiments in the paper.
+* [surreact_uestc_vibe.tar.gz (3.2GB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_uestc_vibe.tar.gz) with 12800 videos (12800 training, 0 test). This is not used in the paper.
+* [surreact_uestc_hmmr.tar.gz (646MB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_uestc_hmmr.tar.gz); [surreact_uestc_hmmr_segm.tar.gz (602MB)](https://lsh.paris.inria.fr/SURREAL/surreact/surreact_uestc_hmmr_segm.tar.gz) with 3193 videos (3154 training, 39 test). This is a subset due to computational complexity, it is used in the paper.
 
 The structure of the folders can be as follows:
 
@@ -66,6 +66,7 @@ surreact/
 --------------------- <sequenceName>/ # e.g. S001C002P003R002A001 for NTU, a25_d1_p048_c1_color.avi for UESTC
 ------------------------------ <sequenceName>_v%03d_r%02d.mp4       # RGB - 240x320 resolution video
 ------------------------------ <sequenceName>_v%03d_r%02d_info.mat  # metadata
+------------------------------ <sequenceName>_v%03d_r%02d_segm.mat  # segmentation
 # bg         [char]          - name of the background image file
 # cam_dist   [1 single]      - camera distance
 # cam_height [1 single]      - camera height
